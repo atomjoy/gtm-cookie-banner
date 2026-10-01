@@ -1,15 +1,14 @@
 <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50 hidden">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p class="text-sm">
-            Używamy plików cookies (w tym narzędzi GTM/Analytics), aby zapewnić najlepszą jakość korzystania z witryny.
-            Możesz zaakceptować wszystkie lub odrzucić opcjonalne skrypty śledzące.
+            We use cookies (including GTM/Analytics) to ensure you get the best experience on our website. You can accept all or decline optional tracking scripts.
         </p>
         <div class="flex gap-2 shrink-0">
             <button id="cookie-accept" class="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded text-sm font-semibold transition">
-                Accept
+                Accept All
             </button>
             <button id="cookie-reject" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded text-sm font-semibold transition">
-                Reject
+                Reject All
             </button>
         </div>
     </div>
@@ -24,7 +23,7 @@
         <path d="M7 12h.01"/>
         <path d="M10 8h.01"/>
     </svg>
-    <span>Cookie settings</span>
+    <span>Cookie Settings</span>
 </button>
 
 <script>
