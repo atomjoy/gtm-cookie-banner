@@ -38,7 +38,7 @@ To ensure your tracking tags (like Google Analytics 4 or Facebook Pixel) fire on
 4. Click **Trigger Configuration** (Konfiguracja reguły) and choose **Custom Event** (Zdarzenie niestandardowe).
 5. In the **Event name** (Nazwa zdarzenia) field, type exactly:
    ```text
-   cookie_consent_accepted
+   cookie_consent_granted
    ```
 6. Set the trigger to fire on **All Custom Events** (Wszystkie zdarzenia niestandardowe).
 7. Click **Save** (Zapisz) in the upper right corner.
