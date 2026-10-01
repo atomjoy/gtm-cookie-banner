@@ -22,6 +22,10 @@ Copy files to view directory.
 </html>
 ```
 
+## Policy
+
+Add a link to the policy.html file (change email address before uploading).
+
 ## Google Tag Manager Configuration
 
 To ensure your tracking tags (like Google Analytics 4 or Facebook Pixel) fire only after user consent, follow these steps in your GTM container:
