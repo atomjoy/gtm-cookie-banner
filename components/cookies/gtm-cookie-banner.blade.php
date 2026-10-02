@@ -1,14 +1,15 @@
 <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50 hidden">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-sm">
-            We use cookies (including GTM/Analytics) to ensure you get the best experience on our website. You can accept all or decline optional tracking scripts.
-        </p>
+        <div class="flex gap-2">
+            <img src="https://raw.githubusercontent.com/atomjoy/gtm-cookie-banner/a23441e9acd0c4a45a783f5ff232a6ea23c25061/img/cookie.svg" width="50" height="50">
+            <span>We use cookies (including GTM/Analytics) to ensure you get the best experience on our website. You can accept all or decline optional tracking scripts.</span>
+        </div>
         <div class="flex gap-2 shrink-0">
-            <button id="cookie-accept" class="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded text-sm font-semibold transition">
-                Accept All
-            </button>
-            <button id="cookie-reject" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded text-sm font-semibold transition">
+            <button id="cookie-reject" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 rounded text-sm font-semibold transition cursor-pointer">
                 Reject All
+            </button>
+            <button id="cookie-accept" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2.5 rounded text-sm font-semibold transition cursor-pointer">
+                Accept All
             </button>
         </div>
     </div>

@@ -1,13 +1,14 @@
 <div id="cookie-banner" class="cookie-hidden" style="z-index:99999; position: fixed; bottom:0px; left:0px; width:100%; background:#222; color:#fff;">
-    <div style="display: flex; flex-direction: column; gap: 1rem; padding: 20px">
-        <div>
-            We use cookies (including GTM/Analytics) to ensure you get the best experience on our website. You can accept all or decline optional tracking scripts.
+    <div style="display: flex;  gap: 1rem; padding: 20px">
+        <div style="display: flex; gap: 9px; align-items: center">
+            <img src="https://raw.githubusercontent.com/atomjoy/gtm-cookie-banner/a23441e9acd0c4a45a783f5ff232a6ea23c25061/img/cookie.svg" width="50" height="50">
+            <span>We use cookies (including GTM/Analytics) to ensure you get the best experience on our website. You can accept all or decline optional tracking scripts.</span>
         </div>
-        <div>
-            <button id="cookie-reject" style="background: #ff2233; color: #fff; padding:10px 20px; border-radius: 10px; border: 0px; cursor: pointer;">
+        <div style="display: flex; gap: 5px; align-items: center; justify-content: center; font-size: 14px; font-weight: 600;">
+            <button id="cookie-reject" style="background: #f25; color: #fff; padding:10px 20px; border-radius: 10px; border: 0px; cursor: pointer; white-space: nowrap;">
                 Reject All
             </button>
-            <button id="cookie-accept" style="background: #55cc55; color: #fff; padding:10px 20px; border-radius: 10px; border: 0px; cursor: pointer;">
+            <button id="cookie-accept" style="background: #5c5; color: #fff; padding:10px 20px; border-radius: 10px; border: 0px; cursor: pointer; white-space: nowrap;">
                 Accept All
             </button>
         </div>
@@ -78,6 +79,11 @@
 </script>
 
 <style>
+    @media all and (max-width: 768px) {
+        #cookie-banner > div {
+            flex-direction: column;
+        }
+    }
     .cookie-hidden {
         display: none !important;
     }
