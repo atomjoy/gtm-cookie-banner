@@ -1,6 +1,6 @@
 # GTM Cookie Consent Banner
 
-Laravel js cookie consent banner for GTM.
+Html js cookie consent banner for GTM (Laravel tailwind or inline css style).
 
 ## View components
 
