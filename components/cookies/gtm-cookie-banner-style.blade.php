@@ -1,7 +1,7 @@
 <div id="cookie-banner" class="cookie-hidden" style="z-index:99999; position: fixed; bottom:0px; left:0px; width:100%; background:#222; color:#fff;">
     <div style="display: flex;  gap: 1rem; padding: 20px">
         <div style="display: flex; gap: 9px; align-items: center">
-            <img src="https://raw.githubusercontent.com/atomjoy/gtm-cookie-banner/a23441e9acd0c4a45a783f5ff232a6ea23c25061/img/cookie.svg" width="50" height="50">
+            <img src="https://raw.githubusercontent.com/atomjoy/gtm-cookie-banner/refs/heads/main/img/cookie.svg" width="50" height="50">
             <span>We use cookies (including GTM/Analytics) to ensure you get the best experience on our website. You can accept all or decline optional tracking scripts.</span>
         </div>
         <div style="display: flex; gap: 5px; align-items: center; justify-content: center; font-size: 14px; font-weight: 600;">
