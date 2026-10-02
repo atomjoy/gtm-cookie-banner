@@ -8,6 +8,8 @@ Copy files to view directory.
 
 ## Install
 
+Use components.cookies.gtm-cookie-banner for tailwind or components.cookies.gtm-cookie-banner-style for inline css style.
+
 ```php
 <!DOCTYPE html>
 <html>
@@ -24,9 +26,9 @@ Copy files to view directory.
 
 ## Policy
 
-Add a link to the policy.html file (change email address before uploading).
+Add a link to the **policy.html** file (change email, address and company before uploading).
 
-## Google Tag Manager Configuration
+## Google Tag Manager Configuration (Optional)
 
 To ensure your tracking tags (like Google Analytics 4 or Facebook Pixel) fire only after user consent, follow these steps in your GTM container:
 
