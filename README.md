@@ -61,3 +61,7 @@ If you want Google tags to automatically adjust their behavior based on the nati
 2. Check the box: **Enable consent overview** (Włącz przegląd ustawień zgody) under Additional Settings.
 3. Now, in the **Tags** section, you will see a shield icon that allows you to manage built-in consent checks for all Google tags.
 
+## Image
+
+<img src="https://raw.githubusercontent.com/atomjoy/gtm-cookie-banner/refs/heads/main/img/gtm-cookie-banner.png" width="100%">
+
