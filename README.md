@@ -8,7 +8,7 @@ Copy files to view directory.
 
 ## Install
 
-Use components.cookies.gtm-cookie-banner for tailwind or components.cookies.gtm-cookie-banner-style for inline css style.
+Use **components.cookies.gtm-cookie-banner** for tailwind or **components.cookies.gtm-cookie-banner-style** for inline css style.
 
 ```php
 <!DOCTYPE html>
