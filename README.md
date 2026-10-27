@@ -28,7 +28,7 @@ Use **components.cookies.gtm-cookie-banner** for tailwind or **components.cookie
 
 Add a link to the **policy.html** file (change email, address and company before uploading).
 
-## Google Tag Manager Configuration (Optional)
+## Google Tag Manager Configuration - Virtual Page Views in SPA (Optional)
 
 To ensure your tracking tags (like Google Analytics 4 or Facebook Pixel) fire only after user consent, follow these steps in your GTM container:
 
@@ -60,6 +60,57 @@ If you want Google tags to automatically adjust their behavior based on the nati
 1. In GTM, go to **Admin** (Administracja) -> **Container Settings** (Ustawienia kontenera).
 2. Check the box: **Enable consent overview** (Włącz przegląd ustawień zgody) under Additional Settings.
 3. Now, in the **Tags** section, you will see a shield icon that allows you to manage built-in consent checks for all Google tags.
+
+### 4. Vue Inertia Laravel
+
+```ts
+import { router } from '@inertiajs/vue3'
+
+/*
+// Trzeba skonfigurować GTM odpowiednio w panelu !!!
+// Na górze pliku app.ts
+import { setupAnalytics } from '@/utils/loadGTM'
+// ... reszta Twojego kodu Inertia (createInertiaApp itp.) ...
+// Wywołujesz na dole pliku app.ts
+setupAnalytics()
+*/
+
+/**
+ * Inicjalizuje śledzenie wirtualnych odsłon (Virtual Pageviews) dla GTM oraz GA4
+ * reagując na nawigację w aplikacji Inertia.js.
+ */
+export function setupAnalytics(): void {
+	router.on('navigate', (event) => {
+		// Opóźnienie 50ms, aby komponent <Head> zdążył zaktualizować tag <title>
+		setTimeout(() => {
+			const currentUrl = window.location.href
+			const currentTitle = document.title
+
+			// From cookie banner
+			const savedConsent = localStorage.getItem('cookie_consent')
+			const consentStatus = savedConsent === 'accepted' ? 'granted' : 'denied'
+
+			// GTM (Google Tag Manager)
+			window.dataLayer = window.dataLayer || []
+			window.dataLayer.push({
+				event: 'virtual_pageview',
+				page_location: currentUrl,
+				page_title: currentTitle,
+				cookie_consent_status: consentStatus,
+			})
+
+			// GA4 (gtag.js)
+			if (typeof window.gtag === 'function') {
+				window.gtag('event', 'page_view', {
+					page_location: currentUrl,
+					page_title: currentTitle,
+					page_referrer: event.detail.page.props.referrer || document.referrer,
+				})
+			}
+		}, 50)
+	})
+}
+```
 
 ## Image
 
